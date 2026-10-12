@@ -36,18 +36,20 @@ Persistent file-based planning for AI coding agents and long-running agent tasks
 </p>
 
 <p align="center">
-  <a href="#before-and-after-clear"><strong>See it survive /clear</strong></a> ·
-  <a href="#quick-install"><strong>Install</strong></a> ·
-  <a href="#built-for-long-running-agent-tasks">Long-running tasks</a> ·
-  <a href="#first-class-hosts-native-plugins">First-class hosts</a> ·
-  <a href="#multi-agent-runs-orchestrators-workers-and-subagents">Multi-agent</a> ·
-  <a href="#benchmark-results">The numbers</a>
+  <a href="#readme-nav-before-clear"><strong>See it survive /clear</strong></a> ·
+  <a href="#readme-nav-quick-install"><strong>Install</strong></a> ·
+  <a href="#readme-nav-long-running">Long-running tasks</a> ·
+  <a href="#readme-nav-hosts">First-class hosts</a> ·
+  <a href="#readme-nav-multi-agent">Multi-agent</a> ·
+  <a href="#readme-nav-benchmark">The numbers</a>
 </p>
 
 <p align="center">
-  <sub>Proof, comparisons and the repository reference are <a href="#reference">further down</a> · <a href="docs/installation.md">Full install guide</a></sub>
+  <sub>Proof, comparisons and the repository reference are <a href="#readme-nav-reference">further down</a> · <a href="docs/installation.md">Full install guide</a></sub>
 </p>
 
+
+<a id="readme-nav-quick-install"></a>
 
 ## Quick Install
 
@@ -59,6 +61,8 @@ All install methods: [docs/installation.md](docs/installation.md).
 
 ---
 
+<a id="readme-nav-before-clear"></a>
+
 ## Before and after /clear
 
 Every coding agent loses its working memory when the context window resets. The plan does not have to die with it.
@@ -66,6 +70,8 @@ Every coding agent loses its working memory when the context window resets. The 
 <p align="center">
   <a href="media/pwf-context-story-v1.mp4"><img src="media/pwf-context-story-v1.gif" alt="Illustrated workflow: planning files preserve the task state through a context reset" width="760"></a>
 </p>
+
+<a id="readme-nav-long-running"></a>
 
 ## Built for long-running agent tasks
 
@@ -104,6 +110,8 @@ The pattern is the one Manus described before [Meta acquired it for $2 billion o
 
 
 <a id="hermes-agent-first-class-support-cli-and-desktop"></a>
+
+<a id="readme-nav-hosts"></a>
 
 ## First-class hosts: native plugins
 
@@ -486,6 +494,8 @@ One skill, three integration tiers. Know what your agent gets before you install
 Per-platform setup guides, discovery paths and sandbox runtimes are in the collapsible sections below [First-class hosts: native plugins](#first-class-hosts-native-plugins).
 
 
+<a id="readme-nav-multi-agent"></a>
+
 ## Multi-agent runs: orchestrators, workers and subagents
 
 > **NOTE**
@@ -694,6 +704,8 @@ Pi runtime modes:
 
 <a id="reference"></a>
 
+<a id="readme-nav-reference"></a>
+
 ## Reference
 
 Everything below is the proof and the reference half: the benchmarks and their limits, what lands in your project and what the repository ships, and every guide in `docs/`. Release history and community projects sit in the collapsible sections below [First-class hosts: native plugins](#first-class-hosts-native-plugins).
@@ -703,6 +715,8 @@ Everything below is the proof and the reference half: the benchmarks and their l
 | [Benchmark Results](#benchmark-results) | The eval run, the blind A/B, the recovery benchmark, and their disclosed limits |
 | [File Structure](#file-structure) | What lands in your project, and the repository layout |
 | [Documentation](#documentation) | Every guide in `docs/` |
+
+<a id="readme-nav-benchmark"></a>
 
 ## Benchmark Results
 
@@ -801,14 +815,6 @@ MIT License — feel free to use, modify, and distribute.
 
 </details>
 
-## Star History
-
-<a href="https://repostars.dev/?repos=OthmanAdi%2Fplanning-with-files&amp;theme=aurora"><img src="https://wsrv.nl/?url=https%3A%2F%2Frepostars.dev%2Fapi%2Fog%3Frepos%3DOthmanAdi%252Fplanning-with-files%26theme%3Daurora&amp;cy=228&amp;ch=334&amp;maxage=1d" width="100%" alt="Star History Chart" /></a>
-
-## ClawHub Downloads
-
-<a href="https://skill-history.com/othmanadi/planning-with-files"><img src="https://skill-history.com/chart/othmanadi/planning-with-files.svg" width="100%" alt="ClawHub Download History Chart" /></a>
-
 ## Contributors
 
 Code, documentation, and issue contributors. Select a portrait to open a GitHub profile or archived credit. [Full credits](CONTRIBUTORS.md).
@@ -898,3 +904,11 @@ Code, documentation, and issue contributors. Select a portrait to open a GitHub 
   <a href="CONTRIBUTORS.md" title="@voidborne-d, archived credit"><img src="https://github.com/identicons/voidborne-d.png" width="48" height="48" alt="@voidborne-d"></a>
 </p>
 <!-- contributor-portraits:end -->
+
+## Star History
+
+<a href="https://repostars.dev/?repos=OthmanAdi%2Fplanning-with-files&amp;theme=aurora"><img src="https://wsrv.nl/?url=https%3A%2F%2Frepostars.dev%2Fapi%2Fog%3Frepos%3DOthmanAdi%252Fplanning-with-files%26theme%3Daurora&amp;cy=228&amp;ch=334&amp;maxage=1d" width="100%" alt="Star History Chart" /></a>
+
+## ClawHub Downloads
+
+<a href="https://skill-history.com/othmanadi/planning-with-files"><img src="https://skill-history.com/chart/othmanadi/planning-with-files.svg" width="100%" alt="ClawHub Download History Chart" /></a>
