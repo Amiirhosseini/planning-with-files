@@ -172,12 +172,14 @@ Planning files are fully compatible. Simply copy your `task_plan.md`, `findings.
 
 ## Additional Resources
 
-**For Global Installation:**
-- [Examples](~/.kilocode/skills/planning-with-files/examples.md) - Real-world examples
-- [Reference](~/.kilocode/skills/planning-with-files/reference.md) - Advanced reference documentation
-- [PowerShell Scripts](~/.kilocode/skills/planning-with-files/scripts/) - Utility scripts for Windows
+Canonical copies live in this repository under
+[`skills/planning-with-files/`](../skills/planning-with-files/):
 
-**For Project Installation:**
-- [Examples](.kilocode/skills/planning-with-files/examples.md) - Real-world examples
-- [Reference](.kilocode/skills/planning-with-files/reference.md) - Advanced reference documentation
-- [PowerShell Scripts](.kilocode/skills/planning-with-files/scripts/) - Utility scripts for Windows
+- [Examples](../skills/planning-with-files/examples.md) — real-world examples
+- [Reference](../skills/planning-with-files/reference.md) — advanced reference documentation
+- [PowerShell Scripts](../skills/planning-with-files/scripts/) — utility scripts for Windows
+
+After install, the same files appear on disk at:
+
+- Global: ``~/.kilocode/skills/planning-with-files/``
+- Project: ``.kilocode/skills/planning-with-files/``
