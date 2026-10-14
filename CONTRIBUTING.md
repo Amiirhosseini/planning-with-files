@@ -26,17 +26,20 @@ The canonical skill lives here:
 skills/planning-with-files/SKILL.md
 ```
 
-Before opening a pull request, run the test suite:
+Before opening a pull request, install the Python test dependencies and run the suite from the repository root:
 
 ```bash
+python -m pip install pytest pyyaml
 python -m pytest tests/ -q
 ```
+
+`pyyaml` is required for full coverage: without it, YAML frontmatter tests in `tests/test_skill_frontmatter_valid.py` skip silently even when pytest exits successfully. On Windows, ensure a POSIX `sh` is on `PATH` (Git Bash provides `sh.exe`); several hook tests skip when `sh` is missing.
 
 Investigate test failures and include any unresolved findings in your pull request description.
 
 ## CI completion rule
 
-Maintainer delivery is complete only after all five `Tests` jobs succeed on the final commit pushed to `master`: pytest on Linux, Windows and macOS, plus the Pi extension and OpenCode plugin suites.
+Maintainer delivery is complete only after all six `Tests` jobs succeed on the final commit pushed to `master`: pytest on Linux, Windows and macOS, plus the Pi extension, OpenCode plugin, and DSH (DeepSeek Harness) plugin vitest suites.
 
 After the final push, verify the remote `master` commit and wait for its workflow to finish. Queued, running, cancelled, timed-out, failed or missing checks mean verification is unfinished. Continue investigating, fixing and rerunning until every job is green. Preserve test coverage and security checks; change runtime limits only when measured runtime justifies a bounded adjustment.
 
