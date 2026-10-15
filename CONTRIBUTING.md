@@ -39,11 +39,43 @@ Investigate test failures and include any unresolved findings in your pull reque
 
 ## CI completion rule
 
-Maintainer delivery is complete only after all six `Tests` jobs succeed on the final commit pushed to `master`: pytest on Linux, Windows and macOS, plus the Pi extension, OpenCode plugin, and DSH (DeepSeek Harness) plugin vitest suites.
+Maintainer delivery is complete only after all six `Tests` jobs succeed on the final commit pushed to `master`:
+
+1. `pytest (ubuntu-latest)`
+2. `pytest (windows-latest)`
+3. `pytest (macos-latest)`
+4. `vitest (Pi extension)`
+5. `vitest (OpenCode plugin)`
+6. `vitest (DSH plugin)` (DeepSeek Harness)
 
 After the final push, verify the remote `master` commit and wait for its workflow to finish. Queued, running, cancelled, timed-out, failed or missing checks mean verification is unfinished. Continue investigating, fixing and rerunning until every job is green. Preserve test coverage and security checks; change runtime limits only when measured runtime justifies a bounded adjustment.
 
 A passing candidate branch or an identical Git tree does not replace checks on the final pushed commit. Recheck remote `master` and its check results immediately before reporting completion. If the user explicitly stops the work or an external blocker prevents progress, record the unfinished checks and the blocker.
+
+Skipped tests often mean missing prerequisites (for example no PyYAML, or no `sh` on Windows). Confirm the frontmatter YAML test actually runs when PyYAML is installed rather than reporting a silent skip.
+
+### Native plugin suites (local)
+
+Mirror CI from these working directories (Node 22):
+
+```bash
+# Pi extension
+cd .pi/skills/planning-with-files/extensions/planning-with-files
+npm ci --no-audit --no-fund
+npm test
+
+# OpenCode plugin
+cd .opencode/packages/opencode-planning-with-files
+npm ci --no-audit --no-fund
+npm run build
+npm test
+
+# DSH (DeepSeek Harness) plugin
+cd .dsh/packages/dsh-planning-with-files
+npm ci --no-audit --no-fund
+npm run build
+npm test
+```
 
 ## Project layout
 
@@ -67,6 +99,7 @@ IDE adapter variants live under these directories:
 .codebuddy/
 .codex/
 .cursor/
+.dsh/
 .factory/
 .hermes/
 .mastracode/
