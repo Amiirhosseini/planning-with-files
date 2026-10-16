@@ -26,7 +26,7 @@ The canonical skill lives here:
 skills/planning-with-files/SKILL.md
 ```
 
-Before opening a pull request, install the Python test dependencies and run the suite from the repository root:
+CI uses Python 3.12. Before opening a pull request, install the Python test dependencies and run the suite from the repository root:
 
 ```bash
 python -m pip install pytest pyyaml
@@ -56,25 +56,31 @@ Skipped tests often mean missing prerequisites (for example no PyYAML, or no `sh
 
 ### Native plugin suites (local)
 
-Mirror CI from these working directories (Node 22):
+Use Node 22 and run these commands from the repository root. Each subshell keeps the next suite at that root and stops its commands if installation or a build fails:
 
 ```bash
 # Pi extension
-cd .pi/skills/planning-with-files/extensions/planning-with-files
-npm ci --no-audit --no-fund
-npm test
+(
+  cd .pi/skills/planning-with-files/extensions/planning-with-files &&
+  npm ci --no-audit --no-fund &&
+  npm test
+)
 
 # OpenCode plugin
-cd .opencode/packages/opencode-planning-with-files
-npm ci --no-audit --no-fund
-npm run build
-npm test
+(
+  cd .opencode/packages/opencode-planning-with-files &&
+  npm ci --no-audit --no-fund &&
+  npm run build &&
+  npm test
+)
 
 # DSH (DeepSeek Harness) plugin
-cd .dsh/packages/dsh-planning-with-files
-npm ci --no-audit --no-fund
-npm run build
-npm test
+(
+  cd .dsh/packages/dsh-planning-with-files &&
+  npm ci --no-audit --no-fund &&
+  npm run build &&
+  npm test
+)
 ```
 
 ## Project layout
